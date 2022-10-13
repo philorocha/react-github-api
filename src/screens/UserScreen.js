@@ -40,10 +40,6 @@ function UserScreen({ route, navigation }) {
             const response = await fetch(`https://api.github.com/users/${username}`);
             const json = await response.json();
             setData(json);
-            /*if (json.message) {
-                console.log('vai dar merda');
-                navigation.navigate('userFormScreen', {data: 'deu errado aqui visse'});
-            }*/
         } catch (error) {
             console.error(error);
         } finally {
